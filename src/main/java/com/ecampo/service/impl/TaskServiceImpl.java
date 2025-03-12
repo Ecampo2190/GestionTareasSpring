@@ -4,7 +4,9 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.ecampo.dto.TaskDTO;
 import com.ecampo.model.Task;
+import com.ecampo.model.User;
 import com.ecampo.repo.IGenericRepo;
 import com.ecampo.repo.ITaskRepo;
 import com.ecampo.service.ITaskService;
@@ -52,6 +54,19 @@ public class TaskServiceImpl extends CRUDImpl<Task, Integer> implements ITaskSer
 	protected IGenericRepo<Task, Integer> getRepo() {
 		// TODO Auto-generated method stub
 		return repo;
+	}
+
+	@Override
+	public TaskDTO createTaskByUser(Integer idUsuario, TaskDTO dto) {
+		// TODO Auto-generated method stub
+		//User usuario=repo.findById(idUsuario).stream().;
+		return new TaskDTO();
+	}
+
+	@Override
+	public List<Task> tareaPorUsuario(Integer id) {
+		// TODO Auto-generated method stub
+		return repo.getTaskByUser(id);
 	}
 	
 	

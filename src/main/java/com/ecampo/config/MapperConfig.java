@@ -37,4 +37,9 @@ public class MapperConfig {
 		return mapper;
 	}
 	
+	@Bean("defaultMapper")
+    public ModelMapper defaultMapper(){
+        return new ModelMapper();
+    }
+	
 }
